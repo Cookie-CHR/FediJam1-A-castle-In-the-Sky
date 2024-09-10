@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckw1xtbjh8ww3"]
+
+[ext_resource type="Script" path="res://Components/general_scene_changer.gd" id="1_do0t6"]
+[ext_resource type="Texture2D" uid="uid://dh4m3qv00b6qc" path="res://Images/default_stuff/Background.png" id="2_p4xu2"]
+[ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="3_xs647"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lbbq6"]
+font_size = 100
+
+[sub_resource type="Theme" id="Theme_rbj1f"]
+default_font_size = 40
+
+[node name="Victory" type="Node2D"]
+script = ExtResource("1_do0t6")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1250, 700)
+texture = ExtResource("2_p4xu2")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 2498.0
+offset_bottom = 403.0
+text = "Congratulations,
+you won the game!"
+label_settings = SubResource("LabelSettings_lbbq6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 500.0
+offset_right = 500.0
+offset_bottom = 650.0
+theme = SubResource("Theme_rbj1f")
+text = " Play again"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 700.0
+offset_right = 501.0
+offset_bottom = 850.0
+theme = SubResource("Theme_rbj1f")
+text = " Credits"
+
+[node name="Mute" parent="." instance=ExtResource("3_xs647")]

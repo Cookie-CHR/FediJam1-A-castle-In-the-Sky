@@ -1,0 +1,154 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwfsv1qjmeviv"]
+
+[ext_resource type="Script" path="res://Components/general_scene_changer.gd" id="1_8m7k7"]
+[ext_resource type="Texture2D" uid="uid://dh4m3qv00b6qc" path="res://Images/default_stuff/Background.png" id="2_387eb"]
+[ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="4_2k32h"]
+[ext_resource type="Texture2D" uid="uid://ces3pya5ahesu" path="res://Images/button_generic.png" id="6_7q4qy"]
+
+[sub_resource type="Theme" id="Theme_q4yhi"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_0nnai"]
+default_font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_7j7f1"]
+font_size = 100
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8m7k7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1250, 700)
+texture = ExtResource("2_387eb")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 1150.0
+offset_right = 600.0
+offset_bottom = 1298.0
+theme = SubResource("Theme_q4yhi")
+text = " Play from level 1"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 700.0
+offset_top = 1150.0
+offset_right = 1004.0
+offset_bottom = 1298.0
+theme = SubResource("Theme_q4yhi")
+text = " Credits"
+
+[node name="1" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 500.0
+offset_top = 300.0
+offset_right = 800.0
+offset_bottom = 600.0
+theme = SubResource("Theme_0nnai")
+text = "1
+"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="2" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 900.0
+offset_top = 300.0
+offset_right = 1200.0
+offset_bottom = 600.0
+theme = SubResource("Theme_0nnai")
+text = "2"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="3" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 1300.0
+offset_top = 300.0
+offset_right = 1468.0
+offset_bottom = 468.0
+theme = SubResource("Theme_0nnai")
+text = "3"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="4" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 1700.0
+offset_top = 300.0
+offset_right = 2000.0
+offset_bottom = 600.0
+theme = SubResource("Theme_0nnai")
+text = "4"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="5" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 500.0
+offset_top = 700.0
+offset_right = 800.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_0nnai")
+text = "5"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="6" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 900.0
+offset_top = 700.0
+offset_right = 1200.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_0nnai")
+text = "6"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="7" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 1300.0
+offset_top = 700.0
+offset_right = 1600.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_0nnai")
+text = "7"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="8" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 1700.0
+offset_top = 700.0
+offset_right = 2000.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_0nnai")
+text = "8
+"
+icon = ExtResource("6_7q4qy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Mute" parent="." instance=ExtResource("4_2k32h")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 2499.0
+offset_bottom = 198.0
+text = "Level map"
+label_settings = SubResource("LabelSettings_7j7f1")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://bao5s24kn8qpa"]
+
+[ext_resource type="Script" path="res://Components/general_scene_changer.gd" id="1_xxc27"]
+[ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/shop_bg.png" id="2_2xawj"]
+[ext_resource type="LabelSettings" uid="uid://brek8e2op85b6" path="res://fonts/title_settings.tres" id="3_s5d38"]
+[ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="4_bqd2g"]
+[ext_resource type="LabelSettings" uid="uid://blbsu4hsi2tv4" path="res://fonts/text_settings.tres" id="4_d8q8i"]
+[ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_kr48f"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xxc27")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1250, 700)
+texture = ExtResource("2_2xawj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 198.0
+offset_top = 232.0
+offset_right = 1254.0
+offset_bottom = 432.0
+text = "Credits"
+label_settings = ExtResource("3_s5d38")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Button" parent="."]
+offset_left = 1474.0
+offset_top = 1175.0
+offset_right = 2177.0
+offset_bottom = 1326.0
+theme = ExtResource("4_kr48f")
+theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
+theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.133333, 1)
+text = "Back to main menu"
+flat = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 542.0
+offset_right = 1262.0
+offset_bottom = 852.0
+text = "Game by Cookie_CHR
+Graphics by CookieCHR
+"
+label_settings = ExtResource("4_d8q8i")
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 835.0
+offset_right = 1262.0
+offset_bottom = 913.0
+text = "Made for the first Fedijam, whose theme was"
+label_settings = ExtResource("4_d8q8i")
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1339.0
+offset_top = 327.0
+offset_right = 2179.0
+offset_bottom = 1203.0
+text = "Music by Kevin MacLeod (incompetech.com):
+- Title:  \"Swing Days - faster\"
+- Main gameplay:   \"Sunshine\"
+- Shop:   \"Cloud Dancer\"
+
+Sounds by freesound.org:
+- Cha_Ching.mp3 by Lucish_ 
+"
+label_settings = ExtResource("4_d8q8i")
+autowrap_mode = 2
+
+[node name="Mute" parent="." instance=ExtResource("4_bqd2g")]
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 470.0
+offset_top = 888.0
+offset_right = 917.0
+offset_bottom = 965.0
+text = "\"Up in che Clouds\""
+label_settings = ExtResource("4_d8q8i")
+horizontal_alignment = 1

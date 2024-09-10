@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://cettcctyfwy41"]
+
+[ext_resource type="PackedScene" uid="uid://p4fk7eqk0i2m" path="res://Components/Launch_bg.tscn" id="2_7y0po"]
+[ext_resource type="PackedScene" uid="uid://1lyrm1461fgg" path="res://Components/launcher.tscn" id="3_vscqn"]
+[ext_resource type="PackedScene" uid="uid://eofx0sd72pwc" path="res://Components/camera.tscn" id="4_x8utc"]
+
+[sub_resource type="GDScript" id="GDScript_630g6"]
+script/source = "extends Node2D
+
+
+var bg_step = 10000
+var max_x = 0 + bg_step
+var bg_scn = preload(\"res://Components/Launch_bg.tscn\")
+
+var power_0 = 3000
+var power_1 = 6000
+var power_2 = 9000
+var fired = false
+
+var player_scn = preload(\"res://Components/player.tscn\")
+
+signal still
+var connected = false;
+
+signal wind_hit
+signal storm_hit
+
+
+func _process(_delta):
+	if(fired):
+		var player = $Player
+		if !connected:
+			player.still.connect($Camera2D.put_banner)
+			connected = true
+		
+		$Camera2D.update_pos(player.position)
+		$Camera2D.update_labels(player.velocity, player.position.x)
+		$Camera2D.timer_start()
+		
+		if(player.position.x > max_x):
+			var bg = bg_scn.instantiate()
+			add_child(bg)
+			var prev_bg = get_node(\"bg-\"+str(max_x-bg_step))
+			prev_bg.queue_free()
+			max_x += bg_step
+			bg.name = \"bg-\"+str(max_x)
+			bg.position.x = max_x
+			bg.z_index = -1
+			bg.connect(\"wind_hit\", apply_wind)
+			bg.connect(\"storm_hit\", apply_storm)
+
+
+func _on_launcher_fired():
+	var player = player_scn.instantiate()
+	player.position = $Launcher.position
+	player.z_index = 20
+	add_child(player)
+	
+	var power = power_0
+	match General.launcher_lvl:
+		1: power = power_1
+		2: power = power_2
+		_: power = power_0
+	player.boost(power, (get_global_mouse_position() - $Launcher.position).angle())
+	$Launcher.queue_free()
+	fired = true
+
+func apply_wind():
+	SoundManager.audio_play(\"wind\")
+	print(\"wind from main\")
+	$Player.boost(2000, 0)
+
+func apply_storm():
+	SoundManager.audio_play(\"storm\")
+	print(\"storm from main\")
+	$Player.stop()
+"
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_630g6")
+
+[node name="bg-10000" parent="." instance=ExtResource("2_7y0po")]
+position = Vector2(10000, 0)
+
+[node name="bg-0" parent="." instance=ExtResource("2_7y0po")]
+
+[node name="Launcher" parent="." instance=ExtResource("3_vscqn")]
+position = Vector2(6, 1920)
+
+[node name="Camera2D" parent="." instance=ExtResource("4_x8utc")]
+position = Vector2(0, 1824)
+
+[connection signal="storm_hit" from="bg-10000" to="." method="apply_storm"]
+[connection signal="wind_hit" from="bg-10000" to="." method="apply_wind"]
+[connection signal="storm_hit" from="bg-0" to="." method="apply_storm"]
+[connection signal="wind_hit" from="bg-0" to="." method="apply_wind"]
+[connection signal="fire" from="Launcher" to="." method="_on_launcher_fired"]

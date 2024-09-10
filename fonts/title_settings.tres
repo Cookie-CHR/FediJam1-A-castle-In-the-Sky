@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://brek8e2op85b6"]
+
+[ext_resource type="FontFile" uid="uid://gegkwu25x5po" path="res://fonts/Merienda/Merienda-VariableFont_wght.ttf" id="1_kpwxp"]
+
+[resource]
+font = ExtResource("1_kpwxp")
+font_size = 75
+font_color = Color(0.266667, 0.2, 0.0666667, 1)

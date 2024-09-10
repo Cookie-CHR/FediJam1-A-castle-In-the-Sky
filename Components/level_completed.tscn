@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://nkjpbpsveojp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep2fd"]
+line_spacing = 0.0
+font_size = 30
+
+[sub_resource type="Theme" id="Theme_tesxp"]
+default_font_size = 22
+
+[node name="panel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -96.0
+offset_top = -113.0
+offset_right = 95.0
+offset_bottom = -13.0
+text = "Level 
+completed!"
+label_settings = SubResource("LabelSettings_ep2fd")
+horizontal_alignment = 1
+
+[node name="Next" type="Button" parent="."]
+offset_left = -87.0
+offset_right = 112.0
+offset_bottom = 68.0
+theme = SubResource("Theme_tesxp")
+text = "Next level"
+flat = true
+
+[node name="Map" type="Button" parent="."]
+offset_left = -86.0
+offset_top = 66.0
+offset_right = 89.0
+offset_bottom = 134.0
+theme = SubResource("Theme_tesxp")
+text = "To map
+"
+flat = true

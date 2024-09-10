@@ -1,0 +1,141 @@
+[gd_scene load_steps=8 format=3 uid="uid://cann1ypmllbht"]
+
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_a7wxc"]
+[ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/shop_bg.png" id="2_i0twn"]
+[ext_resource type="LabelSettings" uid="uid://brek8e2op85b6" path="res://fonts/title_settings.tres" id="2_r6pap"]
+[ext_resource type="LabelSettings" uid="uid://b1umjftdit3p6" path="res://fonts/bold_settings.tres" id="3_8nued"]
+[ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_cd3f2"]
+[ext_resource type="LabelSettings" uid="uid://blbsu4hsi2tv4" path="res://fonts/text_settings.tres" id="5_xo0c8"]
+[ext_resource type="PackedScene" uid="uid://drsegmd5hy2e" path="res://Components/item.tscn" id="7_tegq7"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_a7wxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_i0twn")
+offset = Vector2(1250, 700)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 270.0
+offset_right = 1252.0
+offset_bottom = 390.0
+text = "The Shop"
+label_settings = ExtResource("2_r6pap")
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 2016.0
+offset_top = 1204.0
+offset_right = 2216.0
+offset_bottom = 1304.0
+theme = ExtResource("4_cd3f2")
+theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
+theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.133333, 1)
+text = "Fly!"
+flat = true
+
+[node name="Money_l" type="Label" parent="."]
+offset_left = 1736.0
+offset_top = 308.0
+offset_right = 1933.0
+offset_bottom = 370.0
+text = "Your money:"
+label_settings = ExtResource("5_xo0c8")
+
+[node name="Money" type="Label" parent="."]
+offset_left = 1961.0
+offset_top = 301.0
+offset_right = 2209.0
+offset_bottom = 378.0
+text = "0"
+label_settings = ExtResource("3_8nued")
+
+[node name="Item" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(700, 600)
+type = "launcher"
+level = 1
+price = 10
+
+[node name="Item3" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(700, 1030)
+type = "plane"
+level = 1
+price = 20
+
+[node name="Item4" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1010, 1030)
+type = "plane"
+level = 2
+price = 200
+
+[node name="Item2" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1010, 600)
+type = "launcher"
+level = 2
+price = 100
+
+[node name="Item5" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1715, 792)
+type = "luck"
+level = 1
+price = 50
+
+[node name="Item6" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(2025, 792)
+type = "luck"
+level = 2
+price = 500
+
+[node name="Label" type="Label" parent="."]
+offset_left = 268.0
+offset_top = 420.0
+offset_right = 492.0
+offset_bottom = 497.0
+text = "Launcher"
+label_settings = ExtResource("3_8nued")
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_top = 75.0
+offset_right = 220.0
+offset_bottom = 199.0
+text = "Increases initial boost"
+label_settings = ExtResource("5_xo0c8")
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1312.0
+offset_top = 628.0
+offset_right = 1536.0
+offset_bottom = 705.0
+text = "Luck"
+label_settings = ExtResource("3_8nued")
+
+[node name="Label" type="Label" parent="Label3"]
+layout_mode = 0
+offset_top = 75.0
+offset_right = 228.0
+offset_bottom = 323.0
+text = "More favorable weather"
+label_settings = ExtResource("5_xo0c8")
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 268.0
+offset_top = 855.0
+offset_right = 492.0
+offset_bottom = 932.0
+text = "Plane"
+label_settings = ExtResource("3_8nued")
+
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
+offset_top = 75.0
+offset_right = 268.0
+offset_bottom = 323.0
+text = "Less friction, more speed"
+label_settings = ExtResource("5_xo0c8")
+autowrap_mode = 2

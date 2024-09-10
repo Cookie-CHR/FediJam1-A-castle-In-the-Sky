@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd55idn52xsih"
+path="res://.godot/imported/Sunshine A.mp3-ea69d8fdeeec4023269fb6caf744d7db.mp3str"
+
+[deps]
+
+source_file="res://Music/Music/Sunshine A.mp3"
+dest_files=["res://.godot/imported/Sunshine A.mp3-ea69d8fdeeec4023269fb6caf744d7db.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

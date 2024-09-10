@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b1umjftdit3p6"]
+
+[ext_resource type="FontFile" uid="uid://bghac1hpevlxy" path="res://fonts/Nerko_One/NerkoOne-Regular.ttf" id="1_vxk8h"]
+
+[resource]
+font = ExtResource("1_vxk8h")
+font_size = 60
+font_color = Color(0.266667, 0.2, 0.0666667, 1)

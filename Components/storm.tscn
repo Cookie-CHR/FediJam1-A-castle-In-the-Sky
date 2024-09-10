@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm2rxig1fra68"]
+
+[ext_resource type="Texture2D" uid="uid://ccqbgglys2pfg" path="res://Images/storm.png" id="1_52kl6"]
+[ext_resource type="Script" path="res://Components/storm_wind.gd" id="1_orvk7"]
+
+[node name="Storm" type="Area2D"]
+script = ExtResource("1_orvk7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_52kl6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-76, -164, 73, -161, 155, 109, 146, 183, 84, 251, -37, 250, -123, 179, -119, 118)
+
+[connection signal="body_entered" from="." to="." method="emit_storm"]

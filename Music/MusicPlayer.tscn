@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://sva1pe3e2bdh"]
+
+[ext_resource type="AudioStream" uid="uid://c11c8au02xtku" path="res://Music/Music/Porch Swing Days - faster.mp3" id="1_dr7e1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_dr7e1")
+volume_db = -2.0
+autoplay = true

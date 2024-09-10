@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ar0urinkumn"]
+
+[ext_resource type="Script" path="res://Components/gather_info.gd" id="1_mu346"]
+
+[node name="1" type="Node2D"]
+script = ExtResource("1_mu346")

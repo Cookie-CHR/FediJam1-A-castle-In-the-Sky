@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4lyou7m3mdnn"]
+
+[ext_resource type="Texture2D" uid="uid://c2ao8hiirsvj3" path="res://Images/sound_on.png" id="1_uy3u7"]
+[ext_resource type="Script" path="res://Music/mute_button.gd" id="2_sd4fm"]
+[ext_resource type="Texture2D" uid="uid://bn1pa4ofto0jo" path="res://Images/music_on.png" id="3_mkx2l"]
+
+[node name="Mute" type="Node2D"]
+script = ExtResource("2_sd4fm")
+
+[node name="Audio" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 250.0
+offset_top = 1150.0
+offset_right = 400.0
+offset_bottom = 1300.0
+icon = ExtResource("1_uy3u7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Music" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 450.0
+offset_top = 1144.0
+offset_right = 600.0
+offset_bottom = 1294.0
+icon = ExtResource("3_mkx2l")
+flat = true
+icon_alignment = 1
+expand_icon = true

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://blbsu4hsi2tv4"]
+
+[ext_resource type="FontFile" uid="uid://cbrn5pwh5hpav" path="res://fonts/Indie_Flower/IndieFlower-Regular.ttf" id="1_7w2vc"]
+
+[resource]
+font = ExtResource("1_7w2vc")
+font_size = 40
+font_color = Color(0.266667, 0.2, 0.0666667, 1)

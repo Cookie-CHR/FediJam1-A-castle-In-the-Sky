@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccwl3llks0yht"]
+
+[ext_resource type="Script" path="res://Components/base.gd" id="1_0ugql"]
+[ext_resource type="Texture2D" uid="uid://cltng1ui8ahj0" path="res://Images/Tiles.jpg" id="2_3n581"]
+[ext_resource type="Script" path="res://Components/higlight_cell.gd" id="3_lxogb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_guvom"]
+texture = ExtResource("2_3n581")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eahiy"]
+tile_size = Vector2i(80, 80)
+custom_data_layer_0/name = "occupier"
+custom_data_layer_0/type = 4
+sources/1 = SubResource("TileSetAtlasSource_guvom")
+
+[node name="Base" type="Node2D"]
+script = ExtResource("1_0ugql")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_eahiy")
+cell_quadrant_size = 40
+format = 2
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("3_lxogb")

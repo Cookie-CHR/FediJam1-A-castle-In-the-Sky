@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cotvghobvbvcw"]
+
+[ext_resource type="Script" path="res://Player_Movement.gd" id="1_eo24s"]
+[ext_resource type="Texture2D" uid="uid://bcdg3jin4muvm" path="res://Images/Player.png" id="2_5mg7d"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_eo24s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-108, 131, 159, 45, 208, 22, 149, 20, 115, -103, 99, -127, 69, -142, 43, -140, 21, -120, -159, 58)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5mg7d")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_is_still"]

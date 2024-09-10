@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://mrsixfmuodfi"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+volume_db = 2.0

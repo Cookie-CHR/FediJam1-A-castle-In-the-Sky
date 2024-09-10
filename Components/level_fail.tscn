@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbgt7o417o8og"]
+
+[ext_resource type="Texture2D" uid="uid://lp5b8jgmg3g" path="res://Images/panel_level_over.png" id="1_fcgbh"]
+[ext_resource type="Texture2D" uid="uid://bwxxlavill7em" path="res://Images/reset.png" id="2_0dcvu"]
+[ext_resource type="Texture2D" uid="uid://c831drc16pkbk" path="res://Images/map_small.png" id="3_do5ir"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep2fd"]
+line_spacing = 0.0
+font_size = 30
+
+[sub_resource type="Theme" id="Theme_0sxms"]
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_ei5xv"]
+default_font_size = 22
+
+[node name="panel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fcgbh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -96.0
+offset_top = -111.0
+offset_right = 95.0
+offset_bottom = -11.0
+text = "Level 
+failed!"
+label_settings = SubResource("LabelSettings_ep2fd")
+horizontal_alignment = 1
+
+[node name="Reset" type="Button" parent="."]
+offset_left = -83.0
+offset_right = 64.0
+offset_bottom = 68.0
+theme = SubResource("Theme_0sxms")
+text = "Retry"
+icon = ExtResource("2_0dcvu")
+flat = true
+
+[node name="Map" type="Button" parent="."]
+offset_left = -83.0
+offset_top = 66.0
+offset_right = 92.0
+offset_bottom = 134.0
+theme = SubResource("Theme_ei5xv")
+text = "To map
+"
+icon = ExtResource("3_do5ir")
+flat = true
