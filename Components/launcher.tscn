@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxpv2k3s2g8eb" path="res://Images/arrow.png" id="3_54cse"]
 
 [node name="Launcher" type="Node2D"]
+z_index = 2
 script = ExtResource("1_k41q0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

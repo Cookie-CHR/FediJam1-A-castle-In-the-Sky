@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ch818g8oylt1r" path="res://Images/wind.png" id="1_cvl07"]
 
 [node name="Wind" type="Area2D"]
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_0c8qs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

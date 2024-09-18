@@ -4,6 +4,7 @@
 [ext_resource type="LabelSettings" uid="uid://bl008ne3jy432" path="res://fonts/bold_settings_white.tres" id="2_wflls"]
 
 [node name="Camera2D" type="Camera2D"]
+z_index = 100
 script = ExtResource("1_kuwpw")
 
 [node name="Distance" type="Label" parent="."]

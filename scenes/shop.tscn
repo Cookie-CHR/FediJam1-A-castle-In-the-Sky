@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cann1ypmllbht"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_a7wxc"]
-[ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/shop_bg.png" id="2_i0twn"]
+[ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/Background/shop_bg.png" id="2_e7m62"]
 [ext_resource type="LabelSettings" uid="uid://brek8e2op85b6" path="res://fonts/title_settings.tres" id="2_r6pap"]
 [ext_resource type="LabelSettings" uid="uid://b1umjftdit3p6" path="res://fonts/bold_settings.tres" id="3_8nued"]
 [ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_cd3f2"]
@@ -13,7 +13,7 @@ script = ExtResource("1_a7wxc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
-texture = ExtResource("2_i0twn")
+texture = ExtResource("2_e7m62")
 offset = Vector2(1250, 700)
 
 [node name="Title" type="Label" parent="."]
@@ -53,47 +53,65 @@ offset_bottom = 378.0
 text = "0"
 label_settings = ExtResource("3_8nued")
 
-[node name="Item" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(700, 600)
+[node name="launcher1" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(620, 550)
 type = "launcher"
 level = 1
 price = 10
 
-[node name="Item3" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(700, 1030)
-type = "plane"
-level = 1
-price = 20
-
-[node name="Item4" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(1010, 1030)
-type = "plane"
-level = 2
-price = 200
-
-[node name="Item2" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(1010, 600)
+[node name="launcher2" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(840, 550)
 type = "launcher"
 level = 2
 price = 100
 
-[node name="Item5" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(1715, 792)
+[node name="launcher3" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1060, 550)
+type = "launcher"
+level = 3
+price = 1000
+
+[node name="plane1" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(620, 850)
+type = "plane"
+level = 1
+price = 20
+
+[node name="plane2" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(840, 850)
+type = "plane"
+level = 2
+price = 200
+
+[node name="plane3" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1060, 850)
+type = "plane"
+level = 3
+price = 2000
+
+[node name="luck1" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(620, 1150)
 type = "luck"
 level = 1
 price = 50
 
-[node name="Item6" parent="." instance=ExtResource("7_tegq7")]
-position = Vector2(2025, 792)
+[node name="luck2" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(840, 1150)
 type = "luck"
 level = 2
 price = 500
 
+[node name="luck3" parent="." instance=ExtResource("7_tegq7")]
+position = Vector2(1060, 1150)
+type = "luck"
+level = 3
+price = 5000
+
 [node name="Label" type="Label" parent="."]
 offset_left = 268.0
-offset_top = 420.0
+offset_top = 440.0
 offset_right = 492.0
-offset_bottom = 497.0
+offset_bottom = 517.0
 text = "Launcher"
 label_settings = ExtResource("3_8nued")
 
@@ -107,10 +125,10 @@ label_settings = ExtResource("5_xo0c8")
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1312.0
-offset_top = 628.0
-offset_right = 1536.0
-offset_bottom = 705.0
+offset_left = 268.0
+offset_top = 1040.0
+offset_right = 492.0
+offset_bottom = 1117.0
 text = "Luck"
 label_settings = ExtResource("3_8nued")
 
@@ -125,9 +143,9 @@ autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 268.0
-offset_top = 855.0
+offset_top = 740.0
 offset_right = 492.0
-offset_bottom = 932.0
+offset_bottom = 817.0
 text = "Plane"
 label_settings = ExtResource("3_8nued")
 
@@ -139,3 +157,13 @@ offset_bottom = 323.0
 text = "Less friction, more speed"
 label_settings = ExtResource("5_xo0c8")
 autowrap_mode = 2
+
+[connection signal="item_bought" from="launcher1" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="launcher2" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="launcher3" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="plane1" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="plane2" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="plane3" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="luck1" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="luck2" to="." method="_on_item_bought"]
+[connection signal="item_bought" from="luck3" to="." method="_on_item_bought"]

@@ -7,3 +7,8 @@ func _ready():
 	$Money.text = str(General.money)
 
 
+
+
+func _on_item_bought():
+	$Money.text = str(General.money)
+

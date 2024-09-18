@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cotvghobvbvcw"]
+[gd_scene load_steps=4 format=3 uid="uid://cotvghobvbvcw"]
 
 [ext_resource type="Script" path="res://Player_Movement.gd" id="1_eo24s"]
 [ext_resource type="Texture2D" uid="uid://bcdg3jin4muvm" path="res://Images/Player.png" id="2_5mg7d"]
+[ext_resource type="Texture2D" uid="uid://caete7wfspixf" path="res://Images/Plane_1.png" id="3_bdo3u"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_eo24s")
@@ -9,10 +10,18 @@ script = ExtResource("1_eo24s")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-108, 131, 159, 45, 208, 22, 149, 20, 115, -103, 99, -127, 69, -142, 43, -140, 21, -120, -159, 58)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Player" type="Sprite2D" parent="."]
 texture = ExtResource("2_5mg7d")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Plane" type="Sprite2D" parent="."]
+texture = ExtResource("3_bdo3u")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_is_still"]
+[connection signal="timeout" from="Timer2" to="." method="animate_sprite"]

@@ -3,13 +3,27 @@ extends CharacterBody2D
 var speed = 300
 var g = 1000
 
-var friction_0 = .6
-var friction_1 = .4
-var friction_2 = .2
+var player1 = preload("res://Images/Player.png")
+var player2 = preload("res://Images/Player_2.png")
+
+var p1 = preload("res://Images/Plane_1.png")
+var p2 = preload("res://Images/Plane_2.png")
+var p3 = preload("res://Images/Plane_3.png")
+
+var friction_0 = .7
+var friction_1 = .5
+var friction_2 = .3
+var friction_3 = .1
 
 signal still
 
 func _ready():
+	$Plane.texture = p1
+	match General.plane_lvl:
+		1: $Plane.texture = p1
+		2: $Plane.texture = p2
+		2: $Plane.texture = p3
+		_: pass
 	pass # Replace with function body.
 
 
@@ -48,6 +62,7 @@ func apply_friction():
 	match General.plane_lvl:
 		1: friction = friction_1
 		2: friction = friction_2
+		3: friction = friction_3
 		_: friction = friction_0
 		
 	velocity.x *= ( 100.0-friction ) /100
@@ -59,8 +74,13 @@ func boost(power, angle):
 
 
 func stop():
-	velocity.x = velocity.x/10
+	velocity.x = velocity.x/2
 
 func _is_still():
 	velocity = Vector2(0,0)
 	still.emit()
+
+
+
+func animate_sprite():
+	$Player.texture = player2 if $Player.texture == player1 else player1

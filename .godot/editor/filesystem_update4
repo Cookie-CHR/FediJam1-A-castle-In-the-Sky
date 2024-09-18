@@ -1,1 +1,13 @@
+res://scenes/shop.tscn
+res://Components/item.gd
 res://scenes/menu.tscn
+res://scenes/main.tscn
+res://Components/camera.tscn
+res://Components/Launch_bg.tscn
+res://Components/item.tscn
+res://scenes/credits.tscn
+res://Components/launcher.tscn
+res://Components/player.tscn
+res://scenes/shop.gd
+res://Player_Movement.gd
+res://Components/dictionary.gd

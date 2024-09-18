@@ -16,9 +16,6 @@ func timer_start():
 		$Timer.start()
 		timer_started = true
 
-func update_pos(new_position):
-	if !banner_here:
-		self.position = Vector2(new_position.x, new_position.y)
 	
 # Called when the node enters the scene tree for the first time.
 func update_labels(velocity, distance):
