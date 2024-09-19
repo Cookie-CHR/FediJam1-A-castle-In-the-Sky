@@ -21,3 +21,10 @@ shape = SubResource("RectangleShape2D_vkm1u")
 z_index = 1
 texture = ExtResource("2_2hrcu")
 offset = Vector2(0, 750)
+
+[node name="Ceiling" type="StaticBody2D" parent="."]
+position = Vector2(0, 2000)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ceiling"]
+position = Vector2(0, -3801.5)
+shape = SubResource("RectangleShape2D_vkm1u")

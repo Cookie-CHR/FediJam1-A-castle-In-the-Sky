@@ -3,6 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SoundManager.audio_play("tada");
 	$To_shop.pressed.connect(LevelManager._go_to_shop)
 	z_index = 1000
 
@@ -15,4 +16,4 @@ func adjust_labels(distance,time):
 	General.money += max(0, calc_money(distance, time))
 
 func calc_money(distance, time):
-	return floor(distance*time/50)
+	return floor(distance*time/10)

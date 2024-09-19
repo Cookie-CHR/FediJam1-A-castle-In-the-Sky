@@ -14,10 +14,10 @@ var bg_step = 10000
 var max_x = 0 + bg_step
 var bg_scn = preload(\"res://Components/Launch_bg.tscn\")
 
-var power_0 = 3000
-var power_1 = 6000
-var power_2 = 9000
-var power_3 = 12000
+var power_0 = 2500
+var power_1 = 5000
+var power_2 = 7500
+var power_3 = 10000
 var moving = false
 
 var player_scn = preload(\"res://Components/player.tscn\")
@@ -38,6 +38,7 @@ func _process(_delta):
 		$Camera2D.timer_start()
 		
 		$Sky.position.x = player.position.x
+		$Sky.position.y = player.position.y/2
 		
 		var prev_x_1 = $Land_1.position.x;
 		var prev_x_2 = $Land_2.position.x;
@@ -114,7 +115,7 @@ position = Vector2(10000, 0)
 [node name="bg-0" parent="." instance=ExtResource("2_7y0po")]
 
 [node name="Launcher" parent="." instance=ExtResource("3_vscqn")]
-position = Vector2(6, 1920)
+position = Vector2(0, 1920)
 
 [node name="Camera2D" parent="." instance=ExtResource("4_x8utc")]
 position = Vector2(0, 1824)

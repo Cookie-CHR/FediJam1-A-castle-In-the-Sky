@@ -18,4 +18,5 @@ func _process(_delta):
 	
 func _input(event):
 	if event is InputEventMouseButton:
+		SoundManager.audio_play("boing");
 		emit_signal("fire")

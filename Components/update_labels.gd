@@ -21,7 +21,7 @@ func timer_start():
 func update_labels(velocity, distance):
 	if ! banner_here:
 		total_distance = distance
-		$Distance.text = "Distance: %.2f m" %(distance/100)
+		$Distance.text = "Distance: %.2f m" %(distance/1000)
 		var speed = sqrt(velocity.x*velocity.x + velocity.y*velocity.y)
 		$Velocity.text = "Velocity: %d km/h" %(speed/100)
 
@@ -30,7 +30,7 @@ func put_banner():
 		var banner = banner_scn.instantiate()
 		add_child(banner)
 		banner_here = true;
-		banner.adjust_labels(total_distance/100, total_time)
+		banner.adjust_labels(total_distance/1000, total_time)
 
 func update_time():
 	total_time +=1

@@ -11,22 +11,26 @@ signal item_bought
 func _ready():
 	$Image.texture = load("res://Images/items/"+type+"_"+str(level)+".png")
 	$Label.text = str(price)
+	init()
 	
+func init():	
 	if General.money < price or \
 		(type == "launcher" and General.launcher_lvl >= level) or \
 		(type == "plane" and General.plane_lvl >= level) or \
 		(type == "luck" and General.luck_lvl >= level):
 		$Button.disabled = true
-		if(General.money < price):
-			$Button.add_theme_font_size_override("font_size", 35)
-			$Button.text = "Can't afford"
-		else:
+		
+		if (type == "launcher" and General.launcher_lvl >= level) or \
+		(type == "plane" and General.plane_lvl >= level) or \
+		(type == "luck" and General.luck_lvl >= level):
 			$Button.add_theme_font_size_override("font_size", 50)
 			$Button.text = "Bought!"
+		else:
+			$Button.add_theme_font_size_override("font_size", 35)
+			$Button.text = "Can't afford"
 		$Background.texture = bg_disabled
 
 func buy():
-	print("buy")
 	General.money -= price
 	if type == "launcher" : General.launcher_lvl = level
 	if type == "plane" : General.plane_lvl = level

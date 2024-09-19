@@ -14,7 +14,7 @@ var curr_music = musics["Title"]
 func audio_mute_unmute():
 	audio_mute = not audio_mute
 
-func mute_unmute():
+func music_mute_unmute():
 	if (music_mute):
 		music_mute = false
 		MusicPlayer.play()

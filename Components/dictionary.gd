@@ -1,6 +1,6 @@
 extends Node
 
-var money = 0
+var money = 100
 var launcher_lvl = 0
 var plane_lvl = 0
 var luck_lvl = 0

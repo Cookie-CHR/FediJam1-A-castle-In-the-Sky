@@ -1,5 +1,4 @@
 res://scenes/shop.tscn
-res://Components/item.gd
 res://scenes/menu.tscn
 res://scenes/main.tscn
 res://Components/camera.tscn
@@ -8,6 +7,12 @@ res://Components/item.tscn
 res://scenes/credits.tscn
 res://Components/launcher.tscn
 res://Components/player.tscn
-res://scenes/shop.gd
+res://Music/sound_manager.gd
+res://Components/Banner.gd
+res://Launcher.gd
+res://Components/Banner.tscn
 res://Player_Movement.gd
 res://Components/dictionary.gd
+res://Components/update_labels.gd
+res://Components/item.gd
+res://scenes/shop.gd

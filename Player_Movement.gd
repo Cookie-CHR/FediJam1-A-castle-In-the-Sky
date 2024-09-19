@@ -16,6 +16,8 @@ var friction_2 = .3
 var friction_3 = .1
 
 signal still
+var is_fired = false
+var is_still = false
 
 func _ready():
 	$Plane.texture = p1
@@ -36,8 +38,12 @@ func _process(delta):
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
 		var collider = collision_info.get_collider().name
-		if(collider == "Floor"):
-			velocity = velocity.bounce(collision_info.get_normal())*0.7
+		if(collider == "Floor" and is_fired and !is_still):
+			SoundManager.audio_play("thump");
+			velocity = velocity.bounce(collision_info.get_normal())*0.8
+		if(collider == "Ceiling"):
+			SoundManager.audio_play("thump");
+			velocity = velocity.bounce(collision_info.get_normal())*0.1
 			
 		
 	if(velocity.x<20) and (velocity.y<20) and position.y>1850:
@@ -79,8 +85,10 @@ func stop():
 func _is_still():
 	velocity = Vector2(0,0)
 	still.emit()
+	is_still = true
 
 
 
 func animate_sprite():
 	$Player.texture = player2 if $Player.texture == player1 else player1
+	is_fired = true

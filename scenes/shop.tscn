@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cann1ypmllbht"]
+[gd_scene load_steps=9 format=3 uid="uid://cann1ypmllbht"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_a7wxc"]
 [ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/Background/shop_bg.png" id="2_e7m62"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_cd3f2"]
 [ext_resource type="LabelSettings" uid="uid://blbsu4hsi2tv4" path="res://fonts/text_settings.tres" id="5_xo0c8"]
 [ext_resource type="PackedScene" uid="uid://drsegmd5hy2e" path="res://Components/item.tscn" id="7_tegq7"]
+[ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="8_ir31l"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_a7wxc")
@@ -63,13 +64,13 @@ price = 10
 position = Vector2(840, 550)
 type = "launcher"
 level = 2
-price = 100
+price = 75
 
 [node name="launcher3" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(1060, 550)
 type = "launcher"
 level = 3
-price = 1000
+price = 400
 
 [node name="plane1" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(620, 850)
@@ -81,13 +82,13 @@ price = 20
 position = Vector2(840, 850)
 type = "plane"
 level = 2
-price = 200
+price = 150
 
 [node name="plane3" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(1060, 850)
 type = "plane"
 level = 3
-price = 2000
+price = 750
 
 [node name="luck1" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(620, 1150)
@@ -99,13 +100,13 @@ price = 50
 position = Vector2(840, 1150)
 type = "luck"
 level = 2
-price = 500
+price = 250
 
 [node name="luck3" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(1060, 1150)
 type = "luck"
 level = 3
-price = 5000
+price = 1000
 
 [node name="Label" type="Label" parent="."]
 offset_left = 268.0
@@ -157,6 +158,9 @@ offset_bottom = 323.0
 text = "Less friction, more speed"
 label_settings = ExtResource("5_xo0c8")
 autowrap_mode = 2
+
+[node name="Mute" parent="." instance=ExtResource("8_ir31l")]
+position = Vector2(1100, 0)
 
 [connection signal="item_bought" from="launcher1" to="." method="_on_item_bought"]
 [connection signal="item_bought" from="launcher2" to="." method="_on_item_bought"]
