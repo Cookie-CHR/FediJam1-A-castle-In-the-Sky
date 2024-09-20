@@ -70,7 +70,7 @@ price = 75
 position = Vector2(1060, 550)
 type = "launcher"
 level = 3
-price = 400
+price = 300
 
 [node name="plane1" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(620, 850)
@@ -88,7 +88,7 @@ price = 150
 position = Vector2(1060, 850)
 type = "plane"
 level = 3
-price = 750
+price = 400
 
 [node name="luck1" parent="." instance=ExtResource("7_tegq7")]
 position = Vector2(620, 1150)
@@ -106,7 +106,7 @@ price = 250
 position = Vector2(1060, 1150)
 type = "luck"
 level = 3
-price = 1000
+price = 500
 
 [node name="Label" type="Label" parent="."]
 offset_left = 268.0

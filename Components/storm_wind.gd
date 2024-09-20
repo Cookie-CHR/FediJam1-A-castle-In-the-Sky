@@ -9,4 +9,4 @@ func emit_wind(_var):
 
 func emit_storm(_var):
 	storm_hit.emit()
-	$CollisionPolygon2D.disabled = true
+	$CollisionPolygon2D.set_deferred("disabled", true)

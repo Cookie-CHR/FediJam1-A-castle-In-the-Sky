@@ -24,6 +24,7 @@ func update_labels(velocity, distance):
 		$Distance.text = "Distance: %.2f m" %(distance/1000)
 		var speed = sqrt(velocity.x*velocity.x + velocity.y*velocity.y)
 		$Velocity.text = "Velocity: %d km/h" %(speed/100)
+		$TextureProgressBar.value = distance/1000
 
 func put_banner():
 	if(!banner_here):

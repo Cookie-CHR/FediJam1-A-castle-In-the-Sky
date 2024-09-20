@@ -15,9 +15,9 @@ var max_x = 0 + bg_step
 var bg_scn = preload(\"res://Components/Launch_bg.tscn\")
 
 var power_0 = 2500
-var power_1 = 5000
-var power_2 = 7500
-var power_3 = 10000
+var power_1 = 4000
+var power_2 = 5500
+var power_3 = 7000
 var moving = false
 
 var player_scn = preload(\"res://Components/player.tscn\")
@@ -95,6 +95,7 @@ script = SubResource("GDScript_630g6")
 
 [node name="Sky" type="Sprite2D" parent="."]
 position = Vector2(0, 750)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_lkvse")
 
 [node name="Land_1" type="Sprite2D" parent="."]

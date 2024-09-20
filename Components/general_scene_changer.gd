@@ -6,6 +6,8 @@ func _ready():
 	for child in get_children():
 		if child.name == "Play":
 			child.connect("pressed", play)
+		if child.name == "Reset":
+			child.connect("pressed", reset)
 		if child.name == "Credits":
 			child.connect("pressed", credits)
 		if child.name == "Menu":
@@ -19,6 +21,10 @@ func _ready():
 
 
 func play():
+	LevelManager._play();
+	
+func reset():
+	General.reset()
 	LevelManager._play();
 
 func credits():

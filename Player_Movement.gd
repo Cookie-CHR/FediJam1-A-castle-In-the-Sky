@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 300
+var speed = 500
 var g = 1000
 
 var player1 = preload("res://Images/Player.png")
@@ -20,7 +20,6 @@ var is_fired = false
 var is_still = false
 
 func _ready():
-	$Plane.texture = p1
 	match General.plane_lvl:
 		1: $Plane.texture = p1
 		2: $Plane.texture = p2
@@ -41,16 +40,20 @@ func _process(delta):
 		if(collider == "Floor" and is_fired and !is_still):
 			SoundManager.audio_play("thump");
 			velocity = velocity.bounce(collision_info.get_normal())*0.8
+			
 		if(collider == "Ceiling"):
 			SoundManager.audio_play("thump");
 			velocity = velocity.bounce(collision_info.get_normal())*0.1
 			
-		
-	if(velocity.x<20) and (velocity.y<20) and position.y>1850:
+	if(velocity.x<50) and (velocity.y<50) and position.y>1850:
 		if($Timer.time_left == 0):
 			$Timer.start()
 	else:
 		$Timer.stop()
+	
+	if position.x > 100000:
+		SoundManager.change_music("Main");
+		get_tree().change_scene_to_file("res://scenes/end.tscn")
 
 func aim_mouse():
 	look_at(get_global_mouse_position())

@@ -9,8 +9,8 @@ signal storm_hit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var n_wind = (6+General.luck_lvl) * 5
-	var n_storm = (6-General.luck_lvl) * 5
+	var n_wind = (6+General.luck_lvl) * 3
+	var n_storm = (6-General.luck_lvl) * 3
 	
 	for i in range(n_wind):
 		var wind = wind_scn.instantiate()

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://eofx0sd72pwc"]
+[gd_scene load_steps=5 format=3 uid="uid://eofx0sd72pwc"]
 
 [ext_resource type="Script" path="res://Components/update_labels.gd" id="1_kuwpw"]
 [ext_resource type="LabelSettings" uid="uid://bl008ne3jy432" path="res://fonts/bold_settings_white.tres" id="2_wflls"]
+[ext_resource type="Texture2D" uid="uid://c3torv0d3abjc" path="res://Images/bar_bg.png" id="3_pfw0n"]
+[ext_resource type="Texture2D" uid="uid://dnbioj68rsgai" path="res://Images/bar.png" id="4_dicjt"]
 
 [node name="Camera2D" type="Camera2D"]
 z_index = 100
@@ -28,5 +30,14 @@ label_settings = ExtResource("2_wflls")
 horizontal_alignment = 2
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -450.0
+offset_top = 499.0
+offset_right = 450.0
+offset_bottom = 699.0
+texture_under = ExtResource("3_pfw0n")
+texture_progress = ExtResource("4_dicjt")
+texture_progress_offset = Vector2(150, 135)
 
 [connection signal="timeout" from="Timer" to="." method="update_time"]

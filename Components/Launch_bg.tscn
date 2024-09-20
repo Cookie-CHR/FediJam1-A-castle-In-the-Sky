@@ -20,7 +20,7 @@ shape = SubResource("RectangleShape2D_vkm1u")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture = ExtResource("2_2hrcu")
-offset = Vector2(0, 750)
+offset = Vector2(0, 1000)
 
 [node name="Ceiling" type="StaticBody2D" parent="."]
 position = Vector2(0, 2000)

@@ -1,6 +1,7 @@
+TextureProgressBar
+Sprite2D
 StaticBody2D
 Area2D
 CollisionShape2D
 Panel
 Timer
-Sprite2D

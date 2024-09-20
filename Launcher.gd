@@ -7,7 +7,6 @@ var l2 = preload("res://Images/launcher_2.png")
 var l3 = preload("res://Images/launcher_3.png")
 
 func _ready():
-	$Sprite2D.texture = l1
 	match General.launcher_lvl:
 		1: $Sprite2D.texture = l1
 		2: $Sprite2D.texture = l2
