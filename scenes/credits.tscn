@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bao5s24kn8qpa"]
+[gd_scene load_steps=8 format=3 uid="uid://bao5s24kn8qpa"]
 
 [ext_resource type="Script" path="res://Components/general_scene_changer.gd" id="1_xxc27"]
 [ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/Background/shop_bg.png" id="2_2xawj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="4_bqd2g"]
 [ext_resource type="LabelSettings" uid="uid://blbsu4hsi2tv4" path="res://fonts/text_settings.tres" id="4_d8q8i"]
 [ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_kr48f"]
+[ext_resource type="StyleBox" uid="uid://ftltqqapcqot" path="res://Images/button_stylebox.tres" id="5_dl6sj"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xxc27")
@@ -25,16 +26,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Menu" type="Button" parent="."]
-offset_left = 1474.0
-offset_top = 1175.0
+custom_minimum_size = Vector2(0, 130)
+offset_left = 1706.0
+offset_top = 1127.0
 offset_right = 2177.0
-offset_bottom = 1326.0
+offset_bottom = 1278.0
 theme = ExtResource("4_kr48f")
 theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
 theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.133333, 1)
-text = "Back to main menu"
-flat = true
+theme_override_styles/normal = ExtResource("5_dl6sj")
+theme_override_styles/hover = ExtResource("5_dl6sj")
+theme_override_styles/pressed = ExtResource("5_dl6sj")
+text = "Back to menu"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 298.0

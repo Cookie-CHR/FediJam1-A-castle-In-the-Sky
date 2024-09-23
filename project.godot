@@ -14,9 +14,9 @@ config/name="A Castle in the Sky"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0.576471, 0.901961, 1)
-boot_splash/image="res://Images/Player.png"
+boot_splash/image="res://Images/Cover2_no_bg.png"
 boot_splash/fullsize=false
-config/icon="res://Images/Player.png"
+config/icon="res://Images/Cover2.png"
 
 [autoload]
 

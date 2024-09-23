@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://idke5d3nbvlb"]
+[gd_scene load_steps=11 format=3 uid="uid://idke5d3nbvlb"]
 
 [ext_resource type="Script" path="res://Components/general_scene_changer.gd" id="1_67dfy"]
 [ext_resource type="Texture2D" uid="uid://ctxbogakx7na6" path="res://Images/Background/sky.png" id="2_ywsx8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://vp73kotdnymd" path="res://Images/Background/launch_fg.png" id="4_ji0qj"]
 [ext_resource type="LabelSettings" uid="uid://brek8e2op85b6" path="res://fonts/title_settings.tres" id="6_x056g"]
 [ext_resource type="Texture2D" uid="uid://dr576y3k303kj" path="res://Images/cover.png" id="7_1itv0"]
+[ext_resource type="StyleBox" uid="uid://ftltqqapcqot" path="res://Images/button_stylebox.tres" id="7_lsrnr"]
 [ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="8_r6i2u"]
 
 [node name="Menu" type="Node2D"]
@@ -35,28 +36,34 @@ texture = ExtResource("3_xnh00")
 offset = Vector2(375, 700)
 
 [node name="Play" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 130)
 offset_left = 200.0
-offset_top = 539.0
-offset_right = 365.0
-offset_bottom = 669.0
+offset_top = 497.0
+offset_right = 450.0
+offset_bottom = 627.0
 theme = ExtResource("4_i6nij")
 theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
 theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.0666667, 1)
+theme_override_styles/normal = ExtResource("7_lsrnr")
+theme_override_styles/hover = ExtResource("7_lsrnr")
+theme_override_styles/pressed = ExtResource("7_lsrnr")
 text = " Play"
-flat = true
 
 [node name="Credits" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 130)
 offset_left = 200.0
-offset_top = 665.0
-offset_right = 439.0
-offset_bottom = 781.0
+offset_top = 675.0
+offset_right = 500.0
+offset_bottom = 805.0
 theme = ExtResource("4_i6nij")
 theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
 theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.133333, 1)
+theme_override_styles/normal = ExtResource("7_lsrnr")
+theme_override_styles/hover = ExtResource("7_lsrnr")
+theme_override_styles/pressed = ExtResource("7_lsrnr")
 text = "Credits"
-flat = true
 
 [node name="Title_label2" type="Label" parent="."]
 offset_top = 163.0

@@ -1,18 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://cann1ypmllbht"]
+[gd_scene load_steps=11 format=3 uid="uid://cann1ypmllbht"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_a7wxc"]
 [ext_resource type="Texture2D" uid="uid://3s3sf5orrdny" path="res://Images/Background/shop_bg.png" id="2_e7m62"]
 [ext_resource type="LabelSettings" uid="uid://brek8e2op85b6" path="res://fonts/title_settings.tres" id="2_r6pap"]
 [ext_resource type="LabelSettings" uid="uid://b1umjftdit3p6" path="res://fonts/bold_settings.tres" id="3_8nued"]
 [ext_resource type="Theme" uid="uid://em0j4222xbhc" path="res://fonts/button_settings.tres" id="4_cd3f2"]
+[ext_resource type="StyleBox" uid="uid://ftltqqapcqot" path="res://Images/button_stylebox.tres" id="5_qabvx"]
 [ext_resource type="LabelSettings" uid="uid://blbsu4hsi2tv4" path="res://fonts/text_settings.tres" id="5_xo0c8"]
 [ext_resource type="PackedScene" uid="uid://drsegmd5hy2e" path="res://Components/item.tscn" id="7_tegq7"]
 [ext_resource type="PackedScene" uid="uid://d4lyou7m3mdnn" path="res://Music/mute_button.tscn" id="8_ir31l"]
+[ext_resource type="Texture2D" uid="uid://ckf4xe2sgy37n" path="res://Images/buttons/day_counter.png" id="10_0dsqu"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Shop" type="Node2D"]
 script = ExtResource("1_a7wxc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
 texture = ExtResource("2_e7m62")
 offset = Vector2(1250, 700)
@@ -27,16 +29,19 @@ label_settings = ExtResource("2_r6pap")
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="."]
-offset_left = 2016.0
-offset_top = 1204.0
-offset_right = 2216.0
-offset_bottom = 1304.0
+custom_minimum_size = Vector2(250, 130)
+offset_left = 1940.0
+offset_top = 1170.0
+offset_right = 2190.0
+offset_bottom = 1300.0
 theme = ExtResource("4_cd3f2")
 theme_override_colors/font_color = Color(0.266667, 0.2, 0.0666667, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.266667, 0.133333, 1)
 theme_override_colors/font_hover_color = Color(0.4, 0.266667, 0.133333, 1)
+theme_override_styles/normal = ExtResource("5_qabvx")
+theme_override_styles/hover = ExtResource("5_qabvx")
+theme_override_styles/pressed = ExtResource("5_qabvx")
 text = "Fly!"
-flat = true
 
 [node name="Money_l" type="Label" parent="."]
 offset_left = 1736.0
@@ -161,6 +166,29 @@ autowrap_mode = 2
 
 [node name="Mute" parent="." instance=ExtResource("8_ir31l")]
 position = Vector2(1100, 0)
+
+[node name="Day" type="Sprite2D" parent="."]
+self_modulate = Color(0.933333, 0.8, 0.4, 1)
+position = Vector2(1450, 400)
+texture = ExtResource("10_0dsqu")
+
+[node name="intro" type="Label" parent="Day"]
+offset_left = -81.0
+offset_top = -84.0
+offset_right = 79.0
+offset_bottom = -7.0
+text = "Day"
+label_settings = ExtResource("5_xo0c8")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Day"]
+offset_left = -88.0
+offset_top = -52.0
+offset_right = 80.0
+offset_bottom = 60.0
+text = "0"
+label_settings = ExtResource("2_r6pap")
+horizontal_alignment = 1
 
 [connection signal="item_bought" from="launcher1" to="." method="_on_item_bought"]
 [connection signal="item_bought" from="launcher2" to="." method="_on_item_bought"]

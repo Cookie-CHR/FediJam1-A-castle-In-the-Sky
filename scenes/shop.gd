@@ -5,6 +5,7 @@ extends Node2D
 func _ready():
 	$Play.pressed.connect(LevelManager._play)
 	$Money.text = str(General.money)
+	$Day/Label.text = str(General.day)
 
 
 

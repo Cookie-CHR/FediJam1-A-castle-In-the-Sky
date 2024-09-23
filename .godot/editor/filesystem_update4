@@ -1,5 +1,12 @@
-res://scenes/main.tscn
+res://scenes/end.tscn
+res://fonts/bold_settings.tres
+res://fonts/button_settings.tres
+res://Components/Banner.gd
+res://scenes/Day_label.gd
+res://Components/dictionary.gd
+res://scenes/shop.gd
 res://scenes/menu.tscn
+res://scenes/main.tscn
 res://Components/camera.tscn
 res://Components/Launch_bg.tscn
 res://scenes/shop.tscn
@@ -8,11 +15,3 @@ res://scenes/credits.tscn
 res://Components/launcher.tscn
 res://Components/player.tscn
 res://Components/Banner.tscn
-res://Player_Movement.gd
-res://Components/storm_wind.gd
-res://Components/dictionary.gd
-res://scenes/end.tscn
-res://Components/general_scene_changer.gd
-res://Components/update_labels.gd
-res://Launcher.gd
-res://Components/spawn_clouds.gd

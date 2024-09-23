@@ -1,5 +1,7 @@
-TextureProgressBar
+TextureButton
+Label
 Sprite2D
+TextureProgressBar
 StaticBody2D
 Area2D
 CollisionShape2D

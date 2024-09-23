@@ -14,6 +14,7 @@ func adjust_labels(distance,time):
 	$Money.text = str(calc_money(distance, time))
 	
 	General.money += max(0, calc_money(distance, time))
+	General.day += 1
 
 func calc_money(distance, time):
 	return floor(distance*time/10)
