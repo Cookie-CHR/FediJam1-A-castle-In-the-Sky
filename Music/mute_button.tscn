@@ -8,22 +8,22 @@
 script = ExtResource("2_sd4fm")
 
 [node name="Audio" type="Button" parent="."]
-custom_minimum_size = Vector2(150, 150)
-offset_left = 250.0
-offset_top = 1150.0
-offset_right = 400.0
-offset_bottom = 1300.0
+custom_minimum_size = Vector2(100, 100)
+offset_left = 475.0
+offset_top = 1180.0
+offset_right = 575.0
+offset_bottom = 1280.0
 icon = ExtResource("1_uy3u7")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
 [node name="Music" type="Button" parent="."]
-custom_minimum_size = Vector2(150, 150)
-offset_left = 450.0
-offset_top = 1144.0
-offset_right = 600.0
-offset_bottom = 1294.0
+custom_minimum_size = Vector2(100, 100)
+offset_left = 600.0
+offset_top = 1180.0
+offset_right = 700.0
+offset_bottom = 1280.0
 icon = ExtResource("3_mkx2l")
 flat = true
 icon_alignment = 1
