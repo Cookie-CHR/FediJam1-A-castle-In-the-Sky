@@ -77,6 +77,7 @@ label_settings = ExtResource("4_d8q8i")
 autowrap_mode = 2
 
 [node name="Mute" parent="." instance=ExtResource("4_bqd2g")]
+position = Vector2(870, 0)
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 470.0

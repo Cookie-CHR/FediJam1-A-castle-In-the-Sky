@@ -165,7 +165,7 @@ label_settings = ExtResource("5_xo0c8")
 autowrap_mode = 2
 
 [node name="Mute" parent="." instance=ExtResource("8_ir31l")]
-position = Vector2(1100, 0)
+position = Vector2(870, 0)
 
 [node name="Day" type="Sprite2D" parent="."]
 self_modulate = Color(0.933333, 0.8, 0.4, 1)

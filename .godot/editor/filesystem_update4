@@ -1,10 +1,4 @@
-res://scenes/end.tscn
-res://fonts/bold_settings.tres
-res://fonts/button_settings.tres
-res://Components/Banner.gd
-res://scenes/Day_label.gd
-res://Components/dictionary.gd
-res://scenes/shop.gd
+res://Music/mute_button.tscn
 res://scenes/menu.tscn
 res://scenes/main.tscn
 res://Components/camera.tscn
@@ -15,3 +9,4 @@ res://scenes/credits.tscn
 res://Components/launcher.tscn
 res://Components/player.tscn
 res://Components/Banner.tscn
+res://scenes/end.tscn
